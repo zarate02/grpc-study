@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_package = "io.grpc.serverStreaming";
+option java_outer_classname = "ServerStreamingGrpc";
+
+package serverStreaming;
+
+service ServerStreamingService {
+  rpc ServerStreamingCall (ServerStreamingRequest) returns (stream ServerStreamingReply) {}
+}
+
+message ServerStreamingRequest {
+  string RequsetParm1 = 1;
+}
+
+message ServerStreamingReply {
+  string ReplyParm1 = 1;
+}

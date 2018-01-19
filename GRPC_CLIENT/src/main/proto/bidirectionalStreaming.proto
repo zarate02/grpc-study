@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_package = "io.grpc.bidirectionalStreaming";
+option java_outer_classname = "BidirectionalStreamingGrpc";
+
+package bidirectional;
+
+service BidirectionalStreamingService {
+  rpc BidirectionalStreamingCall (stream BidirectionalStreamingRequest) returns (stream BidirectionalStreamingReply) {}
+}
+
+message BidirectionalStreamingRequest {
+  string RequsetParm1 = 1;
+}
+
+message BidirectionalStreamingReply {
+  string ReplyParm1 = 1;
+}

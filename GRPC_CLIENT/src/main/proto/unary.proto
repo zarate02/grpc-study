@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_package = "io.grpc.unary";
+option java_outer_classname = "UnaryGrpc";
+
+package unary;
+
+service UnaryService {
+  rpc UnaryCall (UnaryRequest) returns (UnaryReply) {}
+}
+
+message UnaryRequest {
+  string RequsetParm1 = 1;
+}
+
+message UnaryReply {
+  string ReplyParm1 = 1;
+}
